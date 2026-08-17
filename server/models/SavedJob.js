@@ -1,0 +1,1 @@
+const m=require('mongoose');const s=new m.Schema({candidateId:{type:m.Schema.Types.ObjectId,ref:'User',required:true},jobId:{type:m.Schema.Types.ObjectId,ref:'Job',required:true}},{timestamps:true});s.index({candidateId:1,jobId:1},{unique:true});module.exports=m.model('SavedJob',s);

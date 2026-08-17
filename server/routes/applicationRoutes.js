@@ -1,0 +1,1 @@
+const r=require('express').Router(),p=require('../middleware/authMiddleware'),a=require('../middleware/roleMiddleware'),c=require('../controllers/applicationController');r.post('/',p,a('candidate'),c.apply);r.get('/my',p,a('candidate'),c.mine);r.get('/:id',p,c.one);r.put('/:id/withdraw',p,a('candidate'),c.withdraw);module.exports=r;

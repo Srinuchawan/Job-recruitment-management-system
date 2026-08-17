@@ -1,0 +1,1 @@
+const m=require('mongoose');module.exports=m.model('Company',new m.Schema({recruiterId:{type:m.Schema.Types.ObjectId,ref:'User',required:true,unique:true},companyName:{type:String,required:true},description:String,website:String,location:String,industry:String,logo:String},{timestamps:true}));
